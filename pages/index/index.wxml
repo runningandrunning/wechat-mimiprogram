@@ -1,0 +1,31 @@
+<!-- wxml -->
+<view class="container">
+<!--
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+-->
+  <view class="search-container">
+    <view class="postion-info" bindtap="handleClick">
+      <text class="position">{{ position }}</text>
+      <icon type="info" size="10"></icon>
+    </view>
+    <input placeholder="搜索" class="search-icon" auto-focus />
+  </view>
+  <view style="width: 100%;">
+    <goods-swiper></goods-swiper>
+  </view>
+  <view style="width: 100%;">
+    <quick-item></quick-item>
+  </view>
+  <view style="width: 100%; height: 92px;padding:12px;">
+    <image style="width: 100%; height: 100%; box-sizing: padding-box;" src="https://img.alicdn.com/simba/img/TB10tw7cXP7gK0jSZFjSuw5aXXa.jpg"></image>
+  </view>
+  <view>
+    <button size="mini" bindtap="tapScan">打开用户授权页面</button>
+  </view>
+</view>

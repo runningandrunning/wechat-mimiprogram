@@ -1,0 +1,8 @@
+<view class="quick-item">
+  <view class="quick-image">
+    <image src="{{ image }}"></image>
+  </view>
+  <view class="quick-name">
+    <text>{{ name }}</text>
+  </view>
+</view>

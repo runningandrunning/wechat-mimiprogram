@@ -1,0 +1,9 @@
+<view class="quick-content">
+  <quick-item 
+    wx:for="{{list}}"
+     wx:key="unique"
+    image="{{item.img}}"
+    name="{{item.name}}"
+    >
+  </quick-item>
+</view>

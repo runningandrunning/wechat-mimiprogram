@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "quick-item": "../quick-item/index"
+  },
+  "component": true
+}

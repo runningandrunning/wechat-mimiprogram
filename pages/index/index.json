@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goods-swiper": "../../components/swipe/index",
+    "quick-item": "../../components/quick-content/index"
+  }
+}

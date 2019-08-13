@@ -1,0 +1,71 @@
+/* pages/postion/index.wxss */
+.current-position {
+  width: 100%;
+  font-size: 12px;
+}
+
+.current-position__title {
+  padding: 20px;
+}
+
+.current-position__title view {
+  margin-right: 10px;
+  display: inline-block;
+  width: 4px;
+  height: 17px;
+  background: salmon;
+  vertical-align: middle;
+}
+.current-position__title text {
+  vertical-align: middle;
+}
+
+.current-position__info {
+  padding: 15px;
+  display: flex;
+  line-height: 30px;
+  background: #fff;
+}
+
+.re-locate[size="mini"] {
+  padding: 0 5px;
+  background-color: salmon;
+  color: #fff;
+  font-size: 12px;
+}
+
+.current-position__info text {
+  flex: 1;
+}
+
+.current-position__info button { 
+  width: 100px;
+}
+
+.set-location {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  background: #fff;
+}
+
+.set-location > view {
+  padding: 15px;
+  border-bottom: 1px solid #d2d2d2;
+  display: flex;
+}
+
+.set-location > view > text {
+  flex: 1;
+}
+
+.set-location > view > icon {
+  width: 18px;
+}
+
+.confirm-btn {
+  width: 350px;
+  margin: 20px auto;
+  background-color: salmon;
+  color: #fff;
+}
+

@@ -1,0 +1,45 @@
+<!--pages/postion/index.wxml-->
+<view class="container">
+  <!--当前位置 -->
+  <view class="current-position">
+    <view class="current-position__title">
+      <view></view>
+      <text>当前位置</text>
+    </view>
+    <view class="current-position__info">
+       <text bindtap="handleOpenLocation">海淀区清河融科融智.蜂巢工厂西区</text>
+       <button size="mini" class="re-locate">
+         <icon type="info" size="10"></icon>
+         重新定位
+       </button>
+    </view>
+  </view>
+  <!--手动选择地址 -->
+  <view class="set-location">
+    <view class="set-location__area">
+      <text>选择地区</text>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+        {{region[0]}}-{{region[1]}}-{{region[2]}}
+        </view>
+      </picker>
+      <icon type="info" size="20"></icon>
+    </view>
+    <view class="set-locaiton__city">
+      <text>{{region[0]}}</text>
+      <icon type="info" size="20"></icon>
+    </view>
+    <view class="set-location__district">
+      <text>{{region[1]}}</text>
+      <icon type="info" size="20"></icon>
+    </view>
+    <view class="set-location__position">
+      <text>海淀区清河融科融智.蜂巢工厂西区</text>
+      <icon type="info" size="20"></icon>
+    </view>
+  </view>
+  <button class="confirm-btn">
+    确定
+  </button>
+</view>
+

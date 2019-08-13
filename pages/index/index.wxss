@@ -1,0 +1,62 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+}
+
+.postion-info {
+  width: 80px;
+  margin-left: 10px;
+  display: inline-flex;
+  height: 30px;
+  line-height: 30px;
+}
+
+.position {
+  width: 70px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.postion-info icon {
+  padding-top: 5px;
+}
+
+.search-icon {
+  flex: 1;
+  background: #fff;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  height: 30px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.search-icon::before {
+  content: "";
+  position: absolute;
+}
