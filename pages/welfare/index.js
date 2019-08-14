@@ -19,5 +19,6 @@ Page({
       //   return util.formatTime(new Date(log))
       // })
     })
+    
   }
 })
