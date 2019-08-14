@@ -1,0 +1,20 @@
+.welfare {
+  padding: 10px 15px 10px 8px;
+  display: flex;
+  margin: 10px;
+  background: #fff;
+}
+
+.welfare__coupon {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  border-left: 1px dashed #ddd;
+}
+
+.welfare__info {
+  flex: 1;
+}
+
+

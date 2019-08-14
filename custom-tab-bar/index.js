@@ -9,30 +9,19 @@ Component({
         iconPath: "/image/icon_component.png",
         selectedIconPath: "/image/icon_component_HL.png",
         text: "附近"
-      }, {
+      },
+      {
         pagePath: "/pages/logs/logs",
         iconPath: "/image/icon_API.png",
         selectedIconPath: "/image/icon_API_HL.png",
         text: "分类"
       },
-      // {
-      //   pagePath: "/pages/logs/logs",
-      //   iconPath: "/image/icon_API.png",
-      //   selectedIconPath: "/image/icon_API_HL.png",
-      //   text: "发现"
-      // },
-      // {
-      //   pagePath: "/pages/logs/logs",
-      //   iconPath: "/image/icon_API.png",
-      //   selectedIconPath: "/image/icon_API_HL.png",
-      //   text: "福利"
-      // },
-      // {
-      //   pagePath: "/pages/logs/logs",
-      //   iconPath: "/image/icon_API.png",
-      //   selectedIconPath: "/image/icon_API_HL.png",
-      //   text: "我的"
-      // }
+      {
+        pagePath: "/pages/welfare/index",
+        iconPath: "/image/icon_API.png",
+        selectedIconPath: "/image/icon_API_HL.png",
+        text: "福利"
+      }
     ]
   },
   attached() {
@@ -45,6 +34,7 @@ Component({
       this.setData({
         selected: data.index
       })
+      console.log(url, data.index)
     }
   }
 })

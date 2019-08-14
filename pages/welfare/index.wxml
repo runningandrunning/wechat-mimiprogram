@@ -1,0 +1,17 @@
+<!-- wxml -->
+<view class="container">
+  <view class="welfare">
+    <view class="welfare__info"></view>
+    <view class="welfare__coupon">
+      <view class="welfare__coupon-persent">
+        <text>
+          已抢
+        </text>
+        <text>
+          0%
+        </text>
+      </view>
+      <button>已抢</button>
+    </view>
+  </view>
+</view>
