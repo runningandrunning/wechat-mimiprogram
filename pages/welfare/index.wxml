@@ -1,5 +1,5 @@
 <!-- wxml -->
-<scroll-view scroll-y class="scroll-view" bindscrolltolower="handleScroll">
+<scroll-view scroll-y style="height={{height}}" class="scroll-view" bindscrolltolower="handleScroll">
   <view class="welfare" wx:for="{{list}}" wx:key="index">
     <view class="welfare__info"></view>
     <view class="welfare__coupon">
@@ -15,4 +15,5 @@
     </view>
   </view>
   <loading wx:if="{{showLoading}}"></loading>
+  <text wx:if="{{noMore}}">已到最底啦~</text>
 </scroll-view>

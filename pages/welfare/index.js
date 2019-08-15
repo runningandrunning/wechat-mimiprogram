@@ -24,12 +24,10 @@ Page({
         name: '',
         status: ''
       },
-      {
-        name: '',
-        status: ''
-      }
     ],
-    showLoading: false
+    showLoading: false,
+    noData: false,
+    noMore: false
   },
   onShow: function () {
     if (typeof this.getTabBar === 'function' &&
@@ -40,34 +38,26 @@ Page({
     }
   },
   onLoad: function () {
+    const self = this
     this.setData({
-      // logs: (wx.getStorageSync('logs') || []).map(log => {
-      //   return util.formatTime(new Date(log))
-      // })
+      height: wx.getSystemInfoSync().windowHeight - 48
     })
-
+    this.fetchList((result) => {
+      // 判断，如果无数据的时候
+      if (result.length > 0) {
+        self.setData({
+          list: result
+        })
+      } else {
+        self.setData({
+          noData: true
+        })
+      }
+    })
   },
 
-  handleClick () {
-    console.log('123')
-    wx.pageScrollTo({
-      scrollTop: 30,
-      duration: 300
-    })
-  },
-  onReachBottom () {
-    this.setData({
-      showLoading: true
-    })
-    console.log('下拉到最下面了~')
-  },
-
-  handleScroll () {
-    this.setData({
-      showLoading: true
-    })
-
-    // 线上环境接口需要进行配置
+  fetchList (callback) {
+    const self = this
     wx.request({
       url: 'http://www.zhangdachun.vip/dbjb/user/code2Session',
       data: {
@@ -78,10 +68,41 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success (res) {
-        console.log(res)
+        const result = res.data.data || []
+        callback(result)
       },
       fail (error) {
         console.log(error)
+      }
+    })
+  },
+
+  handleClick () {
+    wx.pageScrollTo({
+      scrollTop: 30,
+      duration: 300
+    })
+  },
+
+  handleScroll () {
+    const self = this
+    this.setData({
+      showLoading: true
+    })
+    // 线上环境接口需要进行配置
+    this.fetchList((result) => {
+      this.setData({
+        showLoading: false
+      })
+      // 判断，如果无数据的时候
+      if (result.length > 0) {
+        self.setData({
+          list: result
+        })
+      } else {
+        self.setData({
+          noMore: true
+        })
       }
     })
   }
