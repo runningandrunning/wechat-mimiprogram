@@ -1,6 +1,6 @@
 <!-- wxml -->
-<view class="container">
-  <view class="welfare">
+<scroll-view scroll-y class="scroll-view" bindscrolltolower="handleScroll">
+  <view class="welfare" wx:for="{{list}}" wx:key="index">
     <view class="welfare__info"></view>
     <view class="welfare__coupon">
       <view class="welfare__coupon-persent">
@@ -11,7 +11,8 @@
           0%
         </text>
       </view>
-      <button>已抢</button>
+      <button bindtap="handleClick">已抢</button>
     </view>
   </view>
-</view>
+  <loading wx:if="{{showLoading}}"></loading>
+</scroll-view>
